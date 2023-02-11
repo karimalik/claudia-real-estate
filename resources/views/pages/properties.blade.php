@@ -270,4 +270,17 @@ Claudia | Properties
     </div>
 </div>
 <!-- .Properties-->
+
+<div class="section">
+    <div class="row justify-content-center footer-cta" data-aos="fade-up">
+        <div class="col-lg-7 mx-auto text-center">
+            <h2 class="mb-4">Faites Votre Calcul Hypothécaire</h2>
+            <p>
+                <a href="#" class="btn btn-primary text-white py-3 px-4">Calculatrice Hypothécaire</a>
+            </p>
+        </div>
+        <!-- /.col-lg-7 -->
+    </div>
+    <!-- /.row -->
+</div>
 @endsection

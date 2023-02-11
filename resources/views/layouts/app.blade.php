@@ -150,19 +150,10 @@
                                 <a href="#"><span class="icon-instagram"></span></a>
                             </li>
                             <li>
-                                <a href="#"><span class="icon-twitter"></span></a>
-                            </li>
-                            <li>
                                 <a href="#"><span class="icon-facebook"></span></a>
                             </li>
                             <li>
-                                <a href="#"><span class="icon-linkedin"></span></a>
-                            </li>
-                            <li>
                                 <a href="#"><span class="icon-pinterest"></span></a>
-                            </li>
-                            <li>
-                                <a href="#"><span class="icon-dribbble"></span></a>
                             </li>
                         </ul>
                     </div>

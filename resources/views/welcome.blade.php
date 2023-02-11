@@ -194,7 +194,7 @@ Claudia | Home
         <div class="row justify-content-center text-center mb-5">
             <div class="col-lg-5">
                 <h2 class="font-weight-bold heading text-primary mb-4">
-                    Let's find home that's perfect for you
+                    Trouvons la maison qui vous convient le mieux
                 </h2>
                 <p class="text-black-50">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
@@ -205,7 +205,7 @@ Claudia | Home
         <div class="row justify-content-between mb-5">
             <div class="col-lg-7 mb-5 mb-lg-0 order-lg-2">
                 <div class="img-about dots">
-                    <img src="{{ asset('assets/images/hero_bg_3.jpg') }}" alt="Image" class="img-fluid" />
+                    <img src="{{ asset('assets/images/hero_bg_2.jpg') }}" alt="Image" class="img-fluid" />
                 </div>
             </div>
             <div class="col-lg-4">
@@ -276,5 +276,18 @@ Claudia | Home
             </div>
         </div>
     </div>
+</div>
+
+<div class="section">
+    <div class="row justify-content-center footer-cta" data-aos="fade-up">
+        <div class="col-lg-7 mx-auto text-center">
+            <h2 class="mb-4">Faites Votre Calcul Hypothécaire</h2>
+            <p>
+                <a href="#" class="btn btn-primary text-white py-3 px-4">Calculatrice Hypothécaire</a>
+            </p>
+        </div>
+        <!-- /.col-lg-7 -->
+    </div>
+    <!-- /.row -->
 </div>
 @endsection
