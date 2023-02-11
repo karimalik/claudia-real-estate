@@ -8,4 +8,20 @@ use Illuminate\Database\Eloquent\Model;
 class Propertie extends Model
 {
     use HasFactory;
+
+    protected  $fillable = [
+        'name',
+        'beds',
+        'baths',
+        'city',
+        'address',
+        'number_pieces',
+        'years',
+        'description',
+        'image',
+        'images',
+        'basement',
+        'garage',
+        'foundation',
+    ];
 }

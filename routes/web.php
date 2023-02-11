@@ -18,6 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('properties', [App\Http\Controllers\PropertiesController::class, 'index'])->name('properties.index');
+Route::get('contact', [App\Http\Controllers\ContactController::class, 'index'])->name('contact.index');
 
 Auth::routes();
 

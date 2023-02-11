@@ -54,14 +54,14 @@
                         <li class="{{ Request::path() == '/' ? 'active' : '' }}">
                             <a href="{{ url('/') }}">Accueil</a>
                         </li>
-                        <li class="{{ Request::path() == '' ? 'active' : '' }}">
-                            <a href="#">Propriétés</a>
+                        <li class="{{ Request::path() == 'properties' ? 'active' : '' }}">
+                            <a href="{{ route('properties.index') }}">Propriétés</a>
                         </li>
                         <li class="{{ Request::path() == '' ? 'active' : '' }}">
                             <a href="#">A Propos</a>
                         </li>
-                        <li class="{{ Request::path() == '' ? 'active' : '' }}">
-                            <a href="#">Contact</a>
+                        <li class="{{ Request::path() == 'contact' ? 'active' : '' }}">
+                            <a href="{{ route('contact.index') }}">Contact</a>
                         </li>
                     </ul>
 
@@ -103,14 +103,14 @@
                             <li class="{{ Request::path() == '/' ? 'active' : '' }}">
                                 <a href="{{ url('/') }}">Home</a>
                             </li>
-                            <li class="{{ Request::path() == '' ? 'active' : '' }}">
-                                <a href="#">Propriétés</a>
+                            <li class="{{ Request::path() == 'properties' ? 'active' : '' }}">
+                                <a href="{{ route('properties.index') }}">Propriétés</a>
                             </li>
                             <li class="{{ Request::path() == '' ? 'active' : '' }}">
                                 <a href="#">A Propos</a>
                             </li>
-                            <li class="{{ Request::path() == '' ? 'active' : '' }}">
-                                <a href="#">Contact</a>
+                            <li class="{{ Request::path() == 'contact' ? 'active' : '' }}">
+                                <a href="{{ route('contact.index') }}">Contact</a>
                             </li>
 
                         </ul>
