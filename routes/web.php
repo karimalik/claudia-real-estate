@@ -24,6 +24,7 @@ Route::get('about-us', function () {
 
 Route::get('properties', [App\Http\Controllers\PropertiesController::class, 'index'])->name('properties.index');
 Route::get('contact', [App\Http\Controllers\ContactController::class, 'index'])->name('contact.index');
+Route::post('contact', [App\Http\Controllers\ContactController::class, 'sendMessage'])->name('contact.send');
 
 Auth::routes();
 

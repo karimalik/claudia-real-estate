@@ -61,20 +61,26 @@ Claudia | Contact
                 </div>
             </div>
             <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-                <form action="#">
+                @if(Session::has('success'))
+                  <div class="alert alert-success" role="alert">
+                    {{ Session::get('success') }}
+                  </div>
+                @endif
+                <form method="POST" action="{{ route('contact.send') }}">
+                    @csrf
                     <div class="row">
                         <div class="col-6 mb-3">
-                            <input type="text" class="form-control" placeholder="Nom" name="name" />
+                            <input type="text" class="form-control" placeholder="Nom" name="name" required/>
                         </div>
                         <div class="col-6 mb-3">
-                            <input type="email" class="form-control" placeholder="Email" name="email" />
+                            <input type="email" class="form-control" placeholder="Email" name="email" required/>
                         </div>
                         <div class="col-12 mb-3">
-                            <input type="text" class="form-control" placeholder="Sujet" name="subject"/>
+                            <input type="text" class="form-control" placeholder="Sujet" name="subject" required/>
                         </div>
                         <div class="col-12 mb-3">
                             <textarea name="message" id="" cols="30" rows="7" class="form-control"
-                                placeholder="Message"></textarea>
+                                placeholder="Message" required></textarea>
                         </div>
 
                         <div class="col-12">
