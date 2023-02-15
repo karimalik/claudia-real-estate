@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\CategorieController;
+use App\Http\Controllers\Admin\PropertieController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -28,6 +30,8 @@ Route::post('contact', [App\Http\Controllers\ContactController::class, 'sendMess
 
 Route::group(['middleware' => 'auth', 'prefix' => 'cpanel'], function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::resource('categorie', CategorieController::class);
+    Route::resource('propertie', PropertieController::class);
 });
 
 Auth::routes();

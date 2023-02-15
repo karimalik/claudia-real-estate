@@ -28,6 +28,7 @@
     <!-- Custom styles for this template-->
     <link href="{{ asset('admin/css/sb-admin-2.min.css') }}" rel="stylesheet">
 
+
 </head>
 
 <body id="page-top">
@@ -98,7 +99,8 @@
                 </div>
             </li>
 
-            {{-- <!-- Nav Item - Pages Collapse Menu -->
+            {{--
+            <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
                     aria-expanded="true" aria-controls="collapsePages">
@@ -241,6 +243,7 @@
     <!-- Page level custom scripts -->
     <script src="{{ asset('admin/js/demo/chart-area-demo.js') }}"></script>
     <script src="{{ asset('admin/js/demo/chart-pie-demo.js') }}"></script>
+   
 
     @yield('main-js')
 

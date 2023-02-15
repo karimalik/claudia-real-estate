@@ -29,6 +29,7 @@ return new class extends Migration
             $table->string('basement')->nullable();
             $table->string('garage')->nullable();
             $table->string('foundation')->nullable();
+            $table->foreignId('categorie_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }
