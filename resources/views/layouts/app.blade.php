@@ -57,8 +57,8 @@
                         <li class="{{ Request::path() == 'properties' ? 'active' : '' }}">
                             <a href="{{ route('properties.index') }}">Propriétés</a>
                         </li>
-                        <li class="{{ Request::path() == '' ? 'active' : '' }}">
-                            <a href="#">A Propos</a>
+                        <li class="{{ Request::path() == 'about-us' ? 'active' : '' }}">
+                            <a href="{{ url('about-us') }}">A Propos</a>
                         </li>
                         <li class="{{ Request::path() == 'contact' ? 'active' : '' }}">
                             <a href="{{ route('contact.index') }}">Contact</a>
@@ -106,8 +106,8 @@
                             <li class="{{ Request::path() == 'properties' ? 'active' : '' }}">
                                 <a href="{{ route('properties.index') }}">Propriétés</a>
                             </li>
-                            <li class="{{ Request::path() == '' ? 'active' : '' }}">
-                                <a href="#">A Propos</a>
+                            <li class="{{ Request::path() == 'about-us' ? 'active' : '' }}">
+                                <a href="{{ url('about-us') }}">A Propos</a>
                             </li>
                             <li class="{{ Request::path() == 'contact' ? 'active' : '' }}">
                                 <a href="{{ route('contact.index') }}">Contact</a>
