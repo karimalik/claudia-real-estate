@@ -47,7 +47,7 @@
             <div class="menu-bg-wrap">
                 <div class="site-navigation">
                     <a href="{{ url('/') }}" class="logo m-0 float-start">
-                        <img src="{{ asset('assets/images/logo.png') }}" width="120%" height="40px" alt="">
+                        <img src="{{ asset('assets/images/logo1.png') }}" width="120%" height="40px" alt="">
                     </a>
 
                     <ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end">
@@ -135,7 +135,8 @@
                         <h3>Liens</h3>
                         <ul class="list-unstyled links">
                             <li>
-                                <a href="#">Calculatrice Hypothécaire</a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#hypothequeModal">Calculatrice
+                                    Hypothécaire</a>
                             </li>
                             <li>
                                 <a href="#">Calculatrice De La Taxe De Mutation</a>
@@ -162,6 +163,70 @@
                 <!-- /.col-lg-4 -->
             </div>
             <!-- /.row -->
+
+            <!-- Modal -->
+            <div class="modal fade" id="hypothequeModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content">
+                        <div class="modal-header bg-primary">
+                            <h5 class="modal-title text-white" id="exampleModalLabel"> <strong
+                                    class="text-uppercase">Calculatrice
+                                    Hypothécaire</strong> </h5>
+                            <button type="button" class="btn-close text-white" data-bs-dismiss="modal"
+                                aria-label="Close">x</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="col-lg-8 mt-5 justify-content-center" data-aos="fade-up" data-aos-delay="200">
+                                <form action="#">
+                                    <div class="row">
+                                        <div class="col-12 mb-3">
+                                            <label for="" class="text-black">Montant De L'Hypothèque ($):</label> <br>
+                                            <input type="text" class="form-control" placeholder="0,00" name=""
+                                                id="montant-hypotheque" />
+                                        </div>
+                                        <div class="col-6 mb-3">
+                                            <label for="" class="text-black">Taux D'Intérêt Annuel (%):</label> <br>
+                                            <input type="text" class="form-control" placeholder="0,00" name=""
+                                                id="taux" />
+                                        </div>
+                                        <div class="col-6 mb-3">
+                                            <label for="" class="text-black">Amortissement (Années) :</label> <br>
+                                            <select class="form-control" name="" id="amortissement">
+                                                <option value="5" @selected(true)>5</option>
+                                                <option value="10">10</option>
+                                                <option value="15">15</option>
+                                                <option value="20">20</option>
+                                                <option value="25">25</option>
+                                                <option value="30">30</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-6 mb-3">
+                                            <label for="" class="text-black">Versement Annuels ($):</label> <br>
+                                            <input type="text" class="form-control" placeholder="0,00 $" name=""
+                                                id="versement-annuel" @disabled(true) />
+                                        </div>
+                                        <div class="col-6 mb-3">
+                                            <label for="" class="text-black">Montant Annuels ($):</label> <br>
+                                            <input type="text" class="form-control" placeholder="0,00 $" name=""
+                                                id="montant-annuel" @disabled(true) />
+                                        </div>
+
+                                        <div class="col-12">
+                                            <button type="button" class="btn btn-primary">Calculer Le Montant De Mes
+                                                Versements <i class="fa fa-calculator"></i> </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="row mt-5">
                 <div class="col-12 text-center">
