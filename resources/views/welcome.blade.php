@@ -38,7 +38,7 @@ Claudia | Home
             </div>
             <div class="col-lg-6 text-lg-end">
                 <p>
-                    <a href="#" target="_blank" class="btn btn-primary text-white py-3 px-4">View all</a>
+                    <a href="{{ route('properties.index') }}" target="_blank" class="btn btn-primary text-white py-3 px-4">View all</a>
                 </p>
             </div>
         </div>

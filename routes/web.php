@@ -26,6 +26,9 @@ Route::get('properties', [App\Http\Controllers\PropertiesController::class, 'ind
 Route::get('contact', [App\Http\Controllers\ContactController::class, 'index'])->name('contact.index');
 Route::post('contact', [App\Http\Controllers\ContactController::class, 'sendMessage'])->name('contact.send');
 
+Route::group(['middleware' => 'auth', 'prefix' => 'cpanel'], function () {
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+});
+
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
