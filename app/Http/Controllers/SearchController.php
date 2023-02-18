@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 
 class SearchController extends Controller
 {
-    public function search()
+    public function store()
     {
         $search = DB::table('properties')
                   ->join('categories', 'porperties.id', '=', 'categories.id')

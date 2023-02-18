@@ -18,9 +18,11 @@ Claudia | Home
                 <h1 class="heading" data-aos="fade-up">
                     Trouvez la maison de vos rêves
                 </h1>
-                <form action="#" class="narrow-w form-search d-flex align-items-stretch mb-3" data-aos="fade-up"
+                <form action="{{ route('properties.search') }}"
+                    class="narrow-w form-search d-flex align-items-stretch mb-3" data-aos="fade-up"
                     data-aos-delay="200">
-                    <input type="text" class="form-control px-4" placeholder="Enter votre ville ex. Montreal" />
+                    <input type="text" class="form-control px-4" placeholder="Enter votre ville ex. Montreal"
+                        name="q" />
                     <button type="submit" class="btn btn-primary">Rechercher</button>
                 </form>
             </div>
@@ -38,7 +40,8 @@ Claudia | Home
             </div>
             <div class="col-lg-6 text-lg-end">
                 <p>
-                    <a href="{{ route('properties.index') }}" target="_blank" class="btn btn-primary text-white py-3 px-4">View all</a>
+                    <a href="{{ route('properties.index') }}" target="_blank"
+                        class="btn btn-primary text-white py-3 px-4">View all</a>
                 </p>
             </div>
         </div>
@@ -46,90 +49,35 @@ Claudia | Home
             <div class="col-12">
                 <div class="property-slider-wrap">
                     <div class="property-slider">
+                        @foreach ($properties as $propertie)
                         <div class="property-item">
-                            <a href="#" class="img">
-                                <img src="{{ asset('assets/images/img_1.jpg') }}" alt="Image" class="img-fluid" />
+                            <a href="{{ route('properties.show', $propertie->id) }}" class="img">
+                                <img src="{{ asset('Properties/' . $propertie->image) }}" alt="Image" class="img-fluid" />
                             </a>
 
                             <div class="property-content">
-                                <div class="price mb-2"><span>$1,291,000</span></div>
+                                <div class="price mb-2"><span>${{ $propertie->price }}</span></div>
                                 <div>
-                                    <span class="d-block mb-2 text-black-50">5232 California Fake, Ave. 21BC</span>
-                                    <span class="city d-block mb-3">California, USA</span>
+                                    <span class="d-block mb-2 text-black-50">{{ $propertie->address }}</span>
+                                    <span class="city d-block mb-3">{{ $propertie->city }}</span>
 
                                     <div class="specs d-flex mb-4">
                                         <span class="d-block d-flex align-items-center me-3">
                                             <span class="icon-bed me-2"></span>
-                                            <span class="caption">2 beds</span>
+                                            <span class="caption">{{ $propertie->beds }}</span>
                                         </span>
                                         <span class="d-block d-flex align-items-center">
                                             <span class="icon-bath me-2"></span>
-                                            <span class="caption">2 baths</span>
+                                            <span class="caption">{{ $propertie->baths }}</span>
                                         </span>
                                     </div>
 
-                                    <a href="#" class="btn btn-primary py-2 px-3">details</a>
+                                    <a href="{{ route('properties.show', $propertie->id) }}" class="btn btn-primary py-2 px-3">Voir Plus</a>
                                 </div>
                             </div>
                         </div>
                         <!-- .item -->
-
-                        <div class="property-item">
-                            <a href="#" class="img">
-                                <img src="{{ asset('assets/images/img_2.jpg') }}" alt="Image" class="img-fluid" />
-                            </a>
-
-                            <div class="property-content">
-                                <div class="price mb-2"><span>$1,291,000</span></div>
-                                <div>
-                                    <span class="d-block mb-2 text-black-50">5232 California Fake, Ave. 21BC</span>
-                                    <span class="city d-block mb-3">California, USA</span>
-
-                                    <div class="specs d-flex mb-4">
-                                        <span class="d-block d-flex align-items-center me-3">
-                                            <span class="icon-bed me-2"></span>
-                                            <span class="caption">2 beds</span>
-                                        </span>
-                                        <span class="d-block d-flex align-items-center">
-                                            <span class="icon-bath me-2"></span>
-                                            <span class="caption">2 baths</span>
-                                        </span>
-                                    </div>
-
-                                    <a href="#" class="btn btn-primary py-2 px-3">details</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- .item -->
-
-                        <div class="property-item">
-                            <a href="#" class="img">
-                                <img src="{{ asset('assets/images/img_3.jpg') }}" alt="Image" class="img-fluid" />
-                            </a>
-
-                            <div class="property-content">
-                                <div class="price mb-2"><span>$1,291,000</span></div>
-                                <div>
-                                    <span class="d-block mb-2 text-black-50">5232 California Fake, Ave. 21BC</span>
-                                    <span class="city d-block mb-3">California, USA</span>
-
-                                    <div class="specs d-flex mb-4">
-                                        <span class="d-block d-flex align-items-center me-3">
-                                            <span class="icon-bed me-2"></span>
-                                            <span class="caption">2 beds</span>
-                                        </span>
-                                        <span class="d-block d-flex align-items-center">
-                                            <span class="icon-bath me-2"></span>
-                                            <span class="caption">2 baths</span>
-                                        </span>
-                                    </div>
-
-                                    <a href="#" class="btn btn-primary py-2 px-3">See details</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- .item -->
-
+                        @endforeach
                     </div>
 
                     <div id="property-nav" class="controls" tabindex="0" aria-label="Carousel Navigation">

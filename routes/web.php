@@ -16,15 +16,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::get('about-us', function () {
     return view('pages.about');
 });
-
-Route::get('properties', [App\Http\Controllers\PropertiesController::class, 'index'])->name('properties.index');
+Route::get('/', [App\Http\Controllers\WelcomeController::class, 'index']);
+Route::get('propriete', [App\Http\Controllers\PropertiesController::class, 'index'])->name('properties.index');
+Route::get('search', [App\Http\Controllers\PropertiesController::class, 'search'])->name('properties.search');
+Route::get('propriete/{propertie}', [App\Http\Controllers\PropertiesController::class, 'show'])->name('properties.show');
 Route::get('contact', [App\Http\Controllers\ContactController::class, 'index'])->name('contact.index');
 Route::post('contact', [App\Http\Controllers\ContactController::class, 'sendMessage'])->name('contact.send');
 

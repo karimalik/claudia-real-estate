@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('area')->nullable();
             $table->string('number_pieces')->nullable();
             $table->string('years')->nullable();
-            $table->string('description')->nullable();
+            $table->longText('description')->nullable();
             $table->string('image')->nullable();
             $table->text('images')->nullable();
             $table->string('basement')->nullable();
