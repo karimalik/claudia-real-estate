@@ -65,35 +65,36 @@
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+            <li class="nav-item {{ Request::path() == 'propertie' ? 'active' : '' }}">
+                <a class="nav-link collapsed" href="{{ route('propertie.index') }}" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-home"></i>
                     <span>Propriétés</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item {{ Request::path() == '' ? 'active' : '' }}" href="#">Ajouter Une
+                        <a class="collapse-item" href="{{ route('propertie.create') }}">Ajouter Une
                             Propriété</a>
-                        <a class="collapse-item {{ Request::path() == '' ? 'active' : '' }}" href="#">Liste Des
+                        <a class="collapse-item" href="{{ route('propertie.index') }}">Liste Des
                             Propriétés</a>
                     </div>
                 </div>
             </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-                    aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-wrench"></i>
+            <li class="nav-item {{ Request::path() == 'categorie' ? 'active' : '' }}">
+                <a class="nav-link collapsed" href="{{ route('categorie.index') }}"
+                    data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true"
+                    aria-controls="collapseUtilities">
+                    <i class="fas fa-fw fa-book"></i>
                     <span>Catégories</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item {{ Request::path() == '' ? 'active' : '' }}" href="#">Ajouter Une
+                        <a class="collapse-item" href="{{ route('categorie.create') }}">Ajouter Une
                             Catégorie</a>
-                        <a class="collapse-item {{ Request::path() == '' ? 'active' : '' }}" href="#">Liste Des
+                        <a class="collapse-item" href="{{ route('categorie.index') }}">Liste Des
                             Catégories</a>
                     </div>
                 </div>
@@ -243,7 +244,7 @@
     <!-- Page level custom scripts -->
     <script src="{{ asset('admin/js/demo/chart-area-demo.js') }}"></script>
     <script src="{{ asset('admin/js/demo/chart-pie-demo.js') }}"></script>
-   
+
 
     @yield('main-js')
 

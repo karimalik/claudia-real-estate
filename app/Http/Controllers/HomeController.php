@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Categorie;
 use App\Models\Contact;
 use App\Models\Propertie;
 use Illuminate\Http\Request;
@@ -25,12 +26,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $messages = Contact::count();
+        $categories = Categorie::count();
 
         $properties = Propertie::count();
 
         $lists = Propertie::paginate(10);
 
-        return view('home', compact(['messages', 'properties', 'lists']));
+        return view('home', compact(['categories', 'properties', 'lists']));
     }
 }

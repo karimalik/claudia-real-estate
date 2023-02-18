@@ -33,8 +33,8 @@ Claudia | Contact
                         <i class="icon-room"></i>
                         <h4 class="mb-2">Location:</h4>
                         <p>
-                            43 Raymouth Rd. Baltemoer,<br />
-                            London 3910
+                            259 boulevard saint joseph,<br />
+                            bureau 104, Gatineau, Qc j8y 1t6
                         </p>
                     </div>
 
@@ -42,21 +42,21 @@ Claudia | Contact
                         <i class="icon-clock-o"></i>
                         <h4 class="mb-2">Heure D'Ouverture:</h4>
                         <p>
-                            Lundi-Vendredi:<br />
-                            8:00 AM - 18:00 PM
+                            Lundi-Samedi:<br />
+                            8:00 AM - 20:00 PM
                         </p>
                     </div>
 
                     <div class="email mt-4">
                         <i class="icon-envelope"></i>
                         <h4 class="mb-2">Email:</h4>
-                        <p>info@Untree.co</p>
+                        <p>claudia.o.kaldjob@kw.com</p>
                     </div>
 
                     <div class="phone mt-4">
                         <i class="icon-phone"></i>
                         <h4 class="mb-2">Telephone:</h4>
-                        <p>+1 1234 55488 55</p>
+                        <p>819-921-7380</p>
                     </div>
                 </div>
             </div>

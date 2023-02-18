@@ -84,12 +84,12 @@
                 <div class="col-lg-4">
                     <div class="widget">
                         <h3>Contact</h3>
-                        <address>43 Raymouth Rd. Baltemoer, London 3910</address>
+                        <address>259 boulevard saint joseph, bureau 104, <br> Gatineau, Qc j8y 1t6</address>
                         <ul class="list-unstyled links">
-                            <li><a href="tel://11234567890">+1(123)-456-7890</a></li>
-                            <li><a href="tel://11234567890">+1(123)-456-7890</a></li>
+                            <li><a href="tel://819-921-7380">819-921-7380</a></li>
+                            {{-- <li><a href="tel://11234567890">+1(123)-456-7890</a></li> --}}
                             <li>
-                                <a href="mailto:info@mydomain.com">info@mydomain.com</a>
+                                <a href="mailto:claudia.o.kaldjob@kw.com">claudia.o.kaldjob@kw.com</a>
                             </li>
                         </ul>
                     </div>

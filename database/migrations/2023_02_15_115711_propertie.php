@@ -25,10 +25,11 @@ return new class extends Migration
             $table->string('years')->nullable();
             $table->string('description')->nullable();
             $table->string('image')->nullable();
-            $table->string('images')->nullable();
+            $table->text('images')->nullable();
             $table->string('basement')->nullable();
             $table->string('garage')->nullable();
             $table->string('foundation')->nullable();
+            $table->string('price')->nullable();
             $table->foreignId('categorie_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });

@@ -19,9 +19,19 @@ class Propertie extends Model
         'years',
         'description',
         'image',
-        'images',
+        'price',
         'basement',
         'garage',
         'foundation',
+        'categorie_id',
     ];
+
+    protected $casts = [
+        'images' => 'array'
+    ];
+
+    public function categorie()
+    {
+        return $this->belongsTo(Categorie::class);
+    }
 }
